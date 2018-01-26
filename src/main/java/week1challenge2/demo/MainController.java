@@ -17,7 +17,12 @@ public class MainController {
         String number_list=" ";
         do
             {
-                if(myNumber%2==0)
+                if(myNumber==1)
+                {
+                    number_list = number_list + Integer.toString(myNumber);
+                    break;
+                }
+                else if(myNumber%2==0)
                 {
                     number_list=number_list+Integer.toString(myNumber)+"  ";
                     myNumber/=2;
@@ -29,11 +34,12 @@ public class MainController {
                     myNumber=myNumber*3+1;
 
                 }
+
             }
-        while(myNumber>1);
+        while(myNumber>=1);
 
 
-        return "Starting number: "+StartingNumber+"</br>"+number_list+" "+Integer.toString(1);
+        return "Starting number: "+StartingNumber+"</br>"+number_list;
     }
 
 
