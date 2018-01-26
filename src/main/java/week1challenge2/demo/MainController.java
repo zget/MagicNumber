@@ -13,7 +13,7 @@ public class MainController {
     public String magicPattern(@RequestParam("myNumber") int myNumber)
     {
 
-
+        int StartingNumber=myNumber;
         String number_list=" ";
         do
             {
@@ -33,7 +33,7 @@ public class MainController {
         while(myNumber>1);
 
 
-        return number_list+" "+Integer.toString(1);
+        return "Starting number: "+StartingNumber+"</br>"+number_list+" "+Integer.toString(1);
     }
 
 
